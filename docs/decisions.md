@@ -1,0 +1,7 @@
+* I decided to use OWA (open world assumption) in order to avoid negation-as-failure, which means if a fact that relates to the conclusion doesn't exist, the output must be False. In CWA, negation-as-failure exists, so there are no unknowns, only True and False.
+
+* I decided to drop unknowns for the sake of simplicity for now, still using OWA. I know this comes down to using CWA (closed world assumption), where negation-as-failure is allowed. But since we consider adding them, I think this is the right choice.
+
+* I decided to use explicitly rules that have the "someone" or "something" word. I realized that in the previous pilot role experiment, I included rules in the format "If Charlie is red, then Charlie is big", which doesn't analyze binding at all. Maybe this is one of the reasons why we had mixed results and wasn't able to conclude much about binding. These rules can be filtered using the representation field, which writes every rule in either someone/something format, or entity name format.
+
+* I decided to use depth-1 (where the conclusion requires one logical step, as it is in modus ponens and modus tollens). Depth-1 theories also contain depth-0, so I will drop depth-0 theories inside depth-1.
