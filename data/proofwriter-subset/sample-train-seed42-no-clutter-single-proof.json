@@ -1,0 +1,5481 @@
+[
+  {
+    "id": "AttNeg-OWA-D1-3180",
+    "split": "train",
+    "proof": "((triple3 triple4) -> rule1)",
+    "triples": {
+      "triple3": "Dave is quiet.",
+      "triple4": "Dave is round."
+    },
+    "rules": {
+      "rule1": "All quiet, round things are blue."
+    },
+    "theory": "Dave is quiet. Dave is round. All quiet, round things are blue.",
+    "questions": {
+      "Q3": {
+        "question": "Dave is blue.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple3 triple4) -> rule1))]",
+        "representation": "(\"Dave\" \"is\" \"blue\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3 triple4) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is blue.",
+                "representation": "(\"Dave\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Dave is not blue.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3 triple4) -> rule1))]",
+        "representation": "(\"Dave\" \"is\" \"blue\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3 triple4) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is blue.",
+                "representation": "(\"Dave\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-2334",
+    "split": "train",
+    "proof": "((triple5) -> rule8)",
+    "triples": {
+      "triple5": "The tiger is nice."
+    },
+    "rules": {
+      "rule8": "If someone is nice then they visit the lion."
+    },
+    "theory": "The tiger is nice. If someone is nice then they visit the lion.",
+    "questions": {
+      "Q3": {
+        "question": "The tiger visits the lion.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple5) -> rule8))]",
+        "representation": "(\"tiger\" \"visits\" \"lion\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5) -> (rule8 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The tiger visits the lion.",
+                "representation": "(\"tiger\" \"visits\" \"lion\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The tiger does not visit the lion.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple5) -> rule8))]",
+        "representation": "(\"tiger\" \"visits\" \"lion\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5) -> (rule8 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The tiger visits the lion.",
+                "representation": "(\"tiger\" \"visits\" \"lion\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-1366",
+    "split": "train",
+    "proof": "((triple1 triple3) -> rule5)",
+    "triples": {
+      "triple1": "Dave is kind.",
+      "triple3": "Dave is young."
+    },
+    "rules": {
+      "rule5": "All kind, young people are cold."
+    },
+    "theory": "Dave is kind. Dave is young. All kind, young people are cold.",
+    "questions": {
+      "Q3": {
+        "question": "Dave is cold.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple1 triple3) -> rule5))]",
+        "representation": "(\"Dave\" \"is\" \"cold\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1 triple3) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is cold.",
+                "representation": "(\"Dave\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Dave is not cold.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1 triple3) -> rule5))]",
+        "representation": "(\"Dave\" \"is\" \"cold\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1 triple3) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is cold.",
+                "representation": "(\"Dave\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-912",
+    "split": "train",
+    "proof": "((triple6) -> rule6)",
+    "triples": {
+      "triple6": "The tiger eats the bald eagle."
+    },
+    "rules": {
+      "rule6": "If someone eats the bald eagle then they visit the bald eagle."
+    },
+    "theory": "The tiger eats the bald eagle. If someone eats the bald eagle then they visit the bald eagle.",
+    "questions": {
+      "Q3": {
+        "question": "The tiger visits the bald eagle.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple6) -> rule6))]",
+        "representation": "(\"tiger\" \"visits\" \"bald eagle\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The tiger visits the bald eagle.",
+                "representation": "(\"tiger\" \"visits\" \"bald eagle\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The tiger does not visit the bald eagle.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple6) -> rule6))]",
+        "representation": "(\"tiger\" \"visits\" \"bald eagle\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The tiger visits the bald eagle.",
+                "representation": "(\"tiger\" \"visits\" \"bald eagle\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-1565",
+    "split": "train",
+    "proof": "((triple12) -> rule1)",
+    "triples": {
+      "triple12": "Gary is smart."
+    },
+    "rules": {
+      "rule1": "If something is smart then it is young."
+    },
+    "theory": "Gary is smart. If something is smart then it is young.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is young.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple12) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"young\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is young.",
+                "representation": "(\"Gary\" \"is\" \"young\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is not young.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple12) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"young\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is young.",
+                "representation": "(\"Gary\" \"is\" \"young\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2963",
+    "split": "train",
+    "proof": "((triple2) -> rule2)",
+    "triples": {
+      "triple2": "Charlie is nice."
+    },
+    "rules": {
+      "rule2": "All nice people are not quiet."
+    },
+    "theory": "Charlie is nice. All nice people are not quiet.",
+    "questions": {
+      "Q3": {
+        "question": "Charlie is not quiet.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"Charlie\" \"is\" \"quiet\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is not quiet.",
+                "representation": "(\"Charlie\" \"is\" \"quiet\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Charlie is quiet.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"Charlie\" \"is\" \"quiet\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is not quiet.",
+                "representation": "(\"Charlie\" \"is\" \"quiet\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1187",
+    "split": "train",
+    "proof": "((triple1 triple2) -> rule1)",
+    "triples": {
+      "triple1": "The tiger is blue.",
+      "triple2": "The tiger is round."
+    },
+    "rules": {
+      "rule1": "If something is blue and round then it is big."
+    },
+    "theory": "The tiger is blue. The tiger is round. If something is blue and round then it is big.",
+    "questions": {
+      "Q3": {
+        "question": "The tiger is big.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple1 triple2) -> rule1))]",
+        "representation": "(\"tiger\" \"is\" \"big\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1 triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The tiger is big.",
+                "representation": "(\"tiger\" \"is\" \"big\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The tiger is not big.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1 triple2) -> rule1))]",
+        "representation": "(\"tiger\" \"is\" \"big\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1 triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The tiger is big.",
+                "representation": "(\"tiger\" \"is\" \"big\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-1859",
+    "split": "train",
+    "proof": "((triple4) -> rule1)",
+    "triples": {
+      "triple4": "The cat visits the bald eagle."
+    },
+    "rules": {
+      "rule1": "If someone visits the bald eagle then they do not visit the cat."
+    },
+    "theory": "The cat visits the bald eagle. If someone visits the bald eagle then they do not visit the cat.",
+    "questions": {
+      "Q3": {
+        "question": "The cat does not visit the cat.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple4) -> rule1))]",
+        "representation": "(\"cat\" \"visits\" \"cat\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat does not visit the cat.",
+                "representation": "(\"cat\" \"visits\" \"cat\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The cat visits the cat.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple4) -> rule1))]",
+        "representation": "(\"cat\" \"visits\" \"cat\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat does not visit the cat.",
+                "representation": "(\"cat\" \"visits\" \"cat\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1515",
+    "split": "train",
+    "proof": "((triple2 triple15) -> rule1)",
+    "triples": {
+      "triple2": "The bald eagle eats the mouse.",
+      "triple15": "The mouse sees the bald eagle."
+    },
+    "rules": {
+      "rule1": "If something eats the mouse and the mouse sees the bald eagle then it eats the bald eagle."
+    },
+    "theory": "The bald eagle eats the mouse. The mouse sees the bald eagle. If something eats the mouse and the mouse sees the bald eagle then it eats the bald eagle.",
+    "questions": {
+      "Q3": {
+        "question": "The bald eagle eats the bald eagle.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple2 triple15) -> rule1))]",
+        "representation": "(\"bald eagle\" \"eats\" \"bald eagle\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2 triple15) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle eats the bald eagle.",
+                "representation": "(\"bald eagle\" \"eats\" \"bald eagle\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bald eagle does not eat the bald eagle.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2 triple15) -> rule1))]",
+        "representation": "(\"bald eagle\" \"eats\" \"bald eagle\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2 triple15) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle eats the bald eagle.",
+                "representation": "(\"bald eagle\" \"eats\" \"bald eagle\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2048",
+    "split": "train",
+    "proof": "((triple12) -> rule2)",
+    "triples": {
+      "triple12": "Gary is blue."
+    },
+    "rules": {
+      "rule2": "All blue things are rough."
+    },
+    "theory": "Gary is blue. All blue things are rough.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is rough.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple12) -> rule2))]",
+        "representation": "(\"Gary\" \"is\" \"rough\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is rough.",
+                "representation": "(\"Gary\" \"is\" \"rough\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is not rough.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple12) -> rule2))]",
+        "representation": "(\"Gary\" \"is\" \"rough\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is rough.",
+                "representation": "(\"Gary\" \"is\" \"rough\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-395",
+    "split": "train",
+    "proof": "((triple2) -> rule1)",
+    "triples": {
+      "triple2": "Charlie is cold."
+    },
+    "rules": {
+      "rule1": "If someone is cold then they are red."
+    },
+    "theory": "Charlie is cold. If someone is cold then they are red.",
+    "questions": {
+      "Q3": {
+        "question": "Charlie is red.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Charlie\" \"is\" \"red\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is red.",
+                "representation": "(\"Charlie\" \"is\" \"red\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Charlie is not red.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Charlie\" \"is\" \"red\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is red.",
+                "representation": "(\"Charlie\" \"is\" \"red\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-18",
+    "split": "train",
+    "proof": "((triple3) -> rule1)",
+    "triples": {
+      "triple3": "Fiona is furry."
+    },
+    "rules": {
+      "rule1": "Furry things are white."
+    },
+    "theory": "Fiona is furry. Furry things are white.",
+    "questions": {
+      "Q3": {
+        "question": "Fiona is white.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Fiona\" \"is\" \"white\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is white.",
+                "representation": "(\"Fiona\" \"is\" \"white\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Fiona is not white.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Fiona\" \"is\" \"white\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is white.",
+                "representation": "(\"Fiona\" \"is\" \"white\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-3005",
+    "split": "train",
+    "proof": "((triple9) -> rule3)",
+    "triples": {
+      "triple9": "Dave is big."
+    },
+    "rules": {
+      "rule3": "Big things are white."
+    },
+    "theory": "Dave is big. Big things are white.",
+    "questions": {
+      "Q3": {
+        "question": "Dave is white.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple9) -> rule3))]",
+        "representation": "(\"Dave\" \"is\" \"white\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is white.",
+                "representation": "(\"Dave\" \"is\" \"white\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Dave is not white.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple9) -> rule3))]",
+        "representation": "(\"Dave\" \"is\" \"white\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is white.",
+                "representation": "(\"Dave\" \"is\" \"white\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-3100",
+    "split": "train",
+    "proof": "((triple9) -> rule5)",
+    "triples": {
+      "triple9": "Harry is rough."
+    },
+    "rules": {
+      "rule5": "All rough things are green."
+    },
+    "theory": "Harry is rough. All rough things are green.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is green.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple9) -> rule5))]",
+        "representation": "(\"Harry\" \"is\" \"green\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is green.",
+                "representation": "(\"Harry\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not green.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple9) -> rule5))]",
+        "representation": "(\"Harry\" \"is\" \"green\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is green.",
+                "representation": "(\"Harry\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-3324",
+    "split": "train",
+    "proof": "((triple4) -> rule6)",
+    "triples": {
+      "triple4": "Anne is nice."
+    },
+    "rules": {
+      "rule6": "Nice things are blue."
+    },
+    "theory": "Anne is nice. Nice things are blue.",
+    "questions": {
+      "Q3": {
+        "question": "Anne is blue.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple4) -> rule6))]",
+        "representation": "(\"Anne\" \"is\" \"blue\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is blue.",
+                "representation": "(\"Anne\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Anne is not blue.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple4) -> rule6))]",
+        "representation": "(\"Anne\" \"is\" \"blue\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is blue.",
+                "representation": "(\"Anne\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2055",
+    "split": "train",
+    "proof": "((triple12) -> rule1)",
+    "triples": {
+      "triple12": "Gary is kind."
+    },
+    "rules": {
+      "rule1": "All kind things are cold."
+    },
+    "theory": "Gary is kind. All kind things are cold.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is cold.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple12) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"cold\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is cold.",
+                "representation": "(\"Gary\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is not cold.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple12) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"cold\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is cold.",
+                "representation": "(\"Gary\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-1872",
+    "split": "train",
+    "proof": "((triple1) -> rule7)",
+    "triples": {
+      "triple1": "Bob is young."
+    },
+    "rules": {
+      "rule7": "All young things are red."
+    },
+    "theory": "Bob is young. All young things are red.",
+    "questions": {
+      "Q3": {
+        "question": "Bob is red.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule7))]",
+        "representation": "(\"Bob\" \"is\" \"red\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule7 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Bob is red.",
+                "representation": "(\"Bob\" \"is\" \"red\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Bob is not red.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule7))]",
+        "representation": "(\"Bob\" \"is\" \"red\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule7 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Bob is red.",
+                "representation": "(\"Bob\" \"is\" \"red\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2270",
+    "split": "train",
+    "proof": "((triple3) -> rule1)",
+    "triples": {
+      "triple3": "Anne is red."
+    },
+    "rules": {
+      "rule1": "If something is red then it is cold."
+    },
+    "theory": "Anne is red. If something is red then it is cold.",
+    "questions": {
+      "Q3": {
+        "question": "Anne is cold.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"cold\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is cold.",
+                "representation": "(\"Anne\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Anne is not cold.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"cold\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is cold.",
+                "representation": "(\"Anne\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2220",
+    "split": "train",
+    "proof": "((triple8) -> rule3)",
+    "triples": {
+      "triple8": "Fiona is white."
+    },
+    "rules": {
+      "rule3": "All white people are furry."
+    },
+    "theory": "Fiona is white. All white people are furry.",
+    "questions": {
+      "Q3": {
+        "question": "Fiona is furry.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple8) -> rule3))]",
+        "representation": "(\"Fiona\" \"is\" \"furry\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is furry.",
+                "representation": "(\"Fiona\" \"is\" \"furry\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Fiona is not furry.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple8) -> rule3))]",
+        "representation": "(\"Fiona\" \"is\" \"furry\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is furry.",
+                "representation": "(\"Fiona\" \"is\" \"furry\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-345",
+    "split": "train",
+    "proof": "((triple4) -> rule4)",
+    "triples": {
+      "triple4": "The bald eagle likes the tiger."
+    },
+    "rules": {
+      "rule4": "If something likes the tiger then it is cold."
+    },
+    "theory": "The bald eagle likes the tiger. If something likes the tiger then it is cold.",
+    "questions": {
+      "Q3": {
+        "question": "The bald eagle is cold.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple4) -> rule4))]",
+        "representation": "(\"bald eagle\" \"is\" \"cold\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule4 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle is cold.",
+                "representation": "(\"bald eagle\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bald eagle is not cold.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple4) -> rule4))]",
+        "representation": "(\"bald eagle\" \"is\" \"cold\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule4 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle is cold.",
+                "representation": "(\"bald eagle\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-1460",
+    "split": "train",
+    "proof": "((triple7 triple6) -> rule1)",
+    "triples": {
+      "triple6": "Erin is blue.",
+      "triple7": "Erin is round."
+    },
+    "rules": {
+      "rule1": "If someone is round and blue then they are green."
+    },
+    "theory": "Erin is blue. Erin is round. If someone is round and blue then they are green.",
+    "questions": {
+      "Q3": {
+        "question": "Erin is green.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple7 triple6) -> rule1))]",
+        "representation": "(\"Erin\" \"is\" \"green\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7 triple6) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is green.",
+                "representation": "(\"Erin\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Erin is not green.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple7 triple6) -> rule1))]",
+        "representation": "(\"Erin\" \"is\" \"green\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7 triple6) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is green.",
+                "representation": "(\"Erin\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-706",
+    "split": "train",
+    "proof": "((triple2) -> rule2)",
+    "triples": {
+      "triple2": "Harry is nice."
+    },
+    "rules": {
+      "rule2": "All nice people are quiet."
+    },
+    "theory": "Harry is nice. All nice people are quiet.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is quiet.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"Harry\" \"is\" \"quiet\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is quiet.",
+                "representation": "(\"Harry\" \"is\" \"quiet\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not quiet.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"Harry\" \"is\" \"quiet\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is quiet.",
+                "representation": "(\"Harry\" \"is\" \"quiet\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-2377",
+    "split": "train",
+    "proof": "((triple2) -> rule6)",
+    "triples": {
+      "triple2": "The cat is rough."
+    },
+    "rules": {
+      "rule6": "If something is rough then it is big."
+    },
+    "theory": "The cat is rough. If something is rough then it is big.",
+    "questions": {
+      "Q3": {
+        "question": "The cat is big.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule6))]",
+        "representation": "(\"cat\" \"is\" \"big\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat is big.",
+                "representation": "(\"cat\" \"is\" \"big\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The cat is not big.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule6))]",
+        "representation": "(\"cat\" \"is\" \"big\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat is big.",
+                "representation": "(\"cat\" \"is\" \"big\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2599",
+    "split": "train",
+    "proof": "((triple8) -> rule1)",
+    "triples": {
+      "triple8": "Harry is cold."
+    },
+    "rules": {
+      "rule1": "All cold things are not nice."
+    },
+    "theory": "Harry is cold. All cold things are not nice.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is not nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple8) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is not nice.",
+                "representation": "(\"Harry\" \"is\" \"nice\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple8) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is not nice.",
+                "representation": "(\"Harry\" \"is\" \"nice\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-1437",
+    "split": "train",
+    "proof": "((triple12) -> rule1)",
+    "triples": {
+      "triple12": "The squirrel eats the mouse."
+    },
+    "rules": {
+      "rule1": "If something eats the mouse then it sees the squirrel."
+    },
+    "theory": "The squirrel eats the mouse. If something eats the mouse then it sees the squirrel.",
+    "questions": {
+      "Q3": {
+        "question": "The squirrel sees the squirrel.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple12) -> rule1))]",
+        "representation": "(\"squirrel\" \"sees\" \"squirrel\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The squirrel sees the squirrel.",
+                "representation": "(\"squirrel\" \"sees\" \"squirrel\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The squirrel does not see the squirrel.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple12) -> rule1))]",
+        "representation": "(\"squirrel\" \"sees\" \"squirrel\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The squirrel sees the squirrel.",
+                "representation": "(\"squirrel\" \"sees\" \"squirrel\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-1057",
+    "split": "train",
+    "proof": "((triple7 triple6) -> rule2)",
+    "triples": {
+      "triple6": "Erin is blue.",
+      "triple7": "Erin is red."
+    },
+    "rules": {
+      "rule2": "All red, blue things are kind."
+    },
+    "theory": "Erin is blue. Erin is red. All red, blue things are kind.",
+    "questions": {
+      "Q3": {
+        "question": "Erin is kind.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple7 triple6) -> rule2))]",
+        "representation": "(\"Erin\" \"is\" \"kind\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7 triple6) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is kind.",
+                "representation": "(\"Erin\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Erin is not kind.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple7 triple6) -> rule2))]",
+        "representation": "(\"Erin\" \"is\" \"kind\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7 triple6) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is kind.",
+                "representation": "(\"Erin\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-1181",
+    "split": "train",
+    "proof": "((triple3) -> rule3)",
+    "triples": {
+      "triple3": "The rabbit is young."
+    },
+    "rules": {
+      "rule3": "If someone is young then they are cold."
+    },
+    "theory": "The rabbit is young. If someone is young then they are cold.",
+    "questions": {
+      "Q3": {
+        "question": "The rabbit is cold.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule3))]",
+        "representation": "(\"rabbit\" \"is\" \"cold\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The rabbit is cold.",
+                "representation": "(\"rabbit\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The rabbit is not cold.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule3))]",
+        "representation": "(\"rabbit\" \"is\" \"cold\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The rabbit is cold.",
+                "representation": "(\"rabbit\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-490",
+    "split": "train",
+    "proof": "((triple3) -> rule6)",
+    "triples": {
+      "triple3": "Gary is quiet."
+    },
+    "rules": {
+      "rule6": "All quiet things are blue."
+    },
+    "theory": "Gary is quiet. All quiet things are blue.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is blue.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule6))]",
+        "representation": "(\"Gary\" \"is\" \"blue\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is blue.",
+                "representation": "(\"Gary\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is not blue.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule6))]",
+        "representation": "(\"Gary\" \"is\" \"blue\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is blue.",
+                "representation": "(\"Gary\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1339",
+    "split": "train",
+    "proof": "((triple7) -> rule2)",
+    "triples": {
+      "triple7": "The mouse is red."
+    },
+    "rules": {
+      "rule2": "If something is red then it chases the cow."
+    },
+    "theory": "The mouse is red. If something is red then it chases the cow.",
+    "questions": {
+      "Q3": {
+        "question": "The mouse chases the cow.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple7) -> rule2))]",
+        "representation": "(\"mouse\" \"chases\" \"cow\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse chases the cow.",
+                "representation": "(\"mouse\" \"chases\" \"cow\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The mouse does not chase the cow.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple7) -> rule2))]",
+        "representation": "(\"mouse\" \"chases\" \"cow\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse chases the cow.",
+                "representation": "(\"mouse\" \"chases\" \"cow\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-773",
+    "split": "train",
+    "proof": "((triple2) -> rule2)",
+    "triples": {
+      "triple2": "The bald eagle is kind."
+    },
+    "rules": {
+      "rule2": "If someone is kind then they are rough."
+    },
+    "theory": "The bald eagle is kind. If someone is kind then they are rough.",
+    "questions": {
+      "Q3": {
+        "question": "The bald eagle is rough.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"bald eagle\" \"is\" \"rough\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle is rough.",
+                "representation": "(\"bald eagle\" \"is\" \"rough\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bald eagle is not rough.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"bald eagle\" \"is\" \"rough\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle is rough.",
+                "representation": "(\"bald eagle\" \"is\" \"rough\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-3268",
+    "split": "train",
+    "proof": "((triple2) -> rule2)",
+    "triples": {
+      "triple2": "Erin is quiet."
+    },
+    "rules": {
+      "rule2": "Quiet people are not round."
+    },
+    "theory": "Erin is quiet. Quiet people are not round.",
+    "questions": {
+      "Q3": {
+        "question": "Erin is not round.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"Erin\" \"is\" \"round\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is not round.",
+                "representation": "(\"Erin\" \"is\" \"round\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Erin is round.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"Erin\" \"is\" \"round\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is not round.",
+                "representation": "(\"Erin\" \"is\" \"round\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2200",
+    "split": "train",
+    "proof": "((triple7 triple10) -> rule1)",
+    "triples": {
+      "triple7": "Gary is big.",
+      "triple10": "Gary is rough."
+    },
+    "rules": {
+      "rule1": "If someone is big and rough then they are smart."
+    },
+    "theory": "Gary is big. Gary is rough. If someone is big and rough then they are smart.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is smart.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple7 triple10) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"smart\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7 triple10) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is smart.",
+                "representation": "(\"Gary\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is not smart.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple7 triple10) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"smart\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7 triple10) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is smart.",
+                "representation": "(\"Gary\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2463",
+    "split": "train",
+    "proof": "((triple6 triple5) -> rule1)",
+    "triples": {
+      "triple5": "Gary is blue.",
+      "triple6": "Gary is nice."
+    },
+    "rules": {
+      "rule1": "If someone is nice and blue then they are smart."
+    },
+    "theory": "Gary is blue. Gary is nice. If someone is nice and blue then they are smart.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is smart.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple6) -> rule2) OR ((triple6 triple5) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"smart\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is smart.",
+                "representation": "(\"Gary\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          },
+          {
+            "representation": "((triple6 triple5) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is smart.",
+                "representation": "(\"Gary\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is not smart.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple6) -> rule2) OR ((triple6 triple5) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"smart\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is smart.",
+                "representation": "(\"Gary\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          },
+          {
+            "representation": "((triple6 triple5) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is smart.",
+                "representation": "(\"Gary\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-675",
+    "split": "train",
+    "proof": "((triple2) -> rule2)",
+    "triples": {
+      "triple2": "The bear sees the cat."
+    },
+    "rules": {
+      "rule2": "If someone sees the cat then they eat the cat."
+    },
+    "theory": "The bear sees the cat. If someone sees the cat then they eat the cat.",
+    "questions": {
+      "Q3": {
+        "question": "The bear eats the cat.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"bear\" \"eats\" \"cat\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bear eats the cat.",
+                "representation": "(\"bear\" \"eats\" \"cat\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bear does not eat the cat.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"bear\" \"eats\" \"cat\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bear eats the cat.",
+                "representation": "(\"bear\" \"eats\" \"cat\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2460",
+    "split": "train",
+    "proof": "((triple6) -> rule2)",
+    "triples": {
+      "triple6": "Erin is red."
+    },
+    "rules": {
+      "rule2": "All red people are nice."
+    },
+    "theory": "Erin is red. All red people are nice.",
+    "questions": {
+      "Q3": {
+        "question": "Erin is nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple6) -> rule2))]",
+        "representation": "(\"Erin\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is nice.",
+                "representation": "(\"Erin\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Erin is not nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple6) -> rule2))]",
+        "representation": "(\"Erin\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is nice.",
+                "representation": "(\"Erin\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-813",
+    "split": "train",
+    "proof": "((triple1) -> rule2)",
+    "triples": {
+      "triple1": "The bald eagle is round."
+    },
+    "rules": {
+      "rule2": "All round things are nice."
+    },
+    "theory": "The bald eagle is round. All round things are nice.",
+    "questions": {
+      "Q3": {
+        "question": "The bald eagle is nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule2))]",
+        "representation": "(\"bald eagle\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle is nice.",
+                "representation": "(\"bald eagle\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bald eagle is not nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule2))]",
+        "representation": "(\"bald eagle\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle is nice.",
+                "representation": "(\"bald eagle\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-2837",
+    "split": "train",
+    "proof": "((triple1 triple3) -> rule8)",
+    "triples": {
+      "triple1": "The mouse is blue.",
+      "triple3": "The mouse is young."
+    },
+    "rules": {
+      "rule8": "If something is blue and young then it is big."
+    },
+    "theory": "The mouse is blue. The mouse is young. If something is blue and young then it is big.",
+    "questions": {
+      "Q3": {
+        "question": "The mouse is big.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple1 triple3) -> rule8))]",
+        "representation": "(\"mouse\" \"is\" \"big\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1 triple3) -> (rule8 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse is big.",
+                "representation": "(\"mouse\" \"is\" \"big\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The mouse is not big.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1 triple3) -> rule8))]",
+        "representation": "(\"mouse\" \"is\" \"big\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1 triple3) -> (rule8 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse is big.",
+                "representation": "(\"mouse\" \"is\" \"big\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1319",
+    "split": "train",
+    "proof": "((triple12) -> rule1)",
+    "triples": {
+      "triple12": "The squirrel is nice."
+    },
+    "rules": {
+      "rule1": "If something is nice then it likes the cat."
+    },
+    "theory": "The squirrel is nice. If something is nice then it likes the cat.",
+    "questions": {
+      "Q3": {
+        "question": "The squirrel likes the cat.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple12) -> rule1))]",
+        "representation": "(\"squirrel\" \"likes\" \"cat\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The squirrel likes the cat.",
+                "representation": "(\"squirrel\" \"likes\" \"cat\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The squirrel does not like the cat.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple12) -> rule1))]",
+        "representation": "(\"squirrel\" \"likes\" \"cat\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The squirrel likes the cat.",
+                "representation": "(\"squirrel\" \"likes\" \"cat\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-3321",
+    "split": "train",
+    "proof": "((triple3) -> rule1)",
+    "triples": {
+      "triple3": "Gary is white."
+    },
+    "rules": {
+      "rule1": "All white people are cold."
+    },
+    "theory": "Gary is white. All white people are cold.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is cold.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"cold\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is cold.",
+                "representation": "(\"Gary\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is not cold.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"cold\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is cold.",
+                "representation": "(\"Gary\" \"is\" \"cold\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2235",
+    "split": "train",
+    "proof": "((triple8 triple10) -> rule1)",
+    "triples": {
+      "triple8": "Gary is cold.",
+      "triple10": "Gary is nice."
+    },
+    "rules": {
+      "rule1": "If something is cold and nice then it is round."
+    },
+    "theory": "Gary is cold. Gary is nice. If something is cold and nice then it is round.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is round.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple8 triple10) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"round\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8 triple10) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is round.",
+                "representation": "(\"Gary\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is not round.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple8 triple10) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"round\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8 triple10) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is round.",
+                "representation": "(\"Gary\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-159",
+    "split": "train",
+    "proof": "((triple1) -> rule1)",
+    "triples": {
+      "triple1": "The dog sees the squirrel."
+    },
+    "rules": {
+      "rule1": "If someone sees the squirrel then they chase the dog."
+    },
+    "theory": "The dog sees the squirrel. If someone sees the squirrel then they chase the dog.",
+    "questions": {
+      "Q3": {
+        "question": "The dog chases the dog.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"dog\" \"chases\" \"dog\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The dog chases the dog.",
+                "representation": "(\"dog\" \"chases\" \"dog\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The dog does not chase the dog.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"dog\" \"chases\" \"dog\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The dog chases the dog.",
+                "representation": "(\"dog\" \"chases\" \"dog\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-940",
+    "split": "train",
+    "proof": "((triple3) -> rule1)",
+    "triples": {
+      "triple3": "The cow is red."
+    },
+    "rules": {
+      "rule1": "All red people are kind."
+    },
+    "theory": "The cow is red. All red people are kind.",
+    "questions": {
+      "Q3": {
+        "question": "The cow is kind.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"cow\" \"is\" \"kind\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cow is kind.",
+                "representation": "(\"cow\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The cow is not kind.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"cow\" \"is\" \"kind\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cow is kind.",
+                "representation": "(\"cow\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1852",
+    "split": "train",
+    "proof": "((triple5 triple10) -> rule1)",
+    "triples": {
+      "triple5": "The bald eagle visits the cat.",
+      "triple10": "The cat likes the bald eagle."
+    },
+    "rules": {
+      "rule1": "If something visits the cat and the cat likes the bald eagle then it sees the bald eagle."
+    },
+    "theory": "The bald eagle visits the cat. The cat likes the bald eagle. If something visits the cat and the cat likes the bald eagle then it sees the bald eagle.",
+    "questions": {
+      "Q3": {
+        "question": "The bald eagle sees the bald eagle.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple5 triple10) -> rule1))]",
+        "representation": "(\"bald eagle\" \"sees\" \"bald eagle\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5 triple10) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle sees the bald eagle.",
+                "representation": "(\"bald eagle\" \"sees\" \"bald eagle\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bald eagle does not see the bald eagle.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple5 triple10) -> rule1))]",
+        "representation": "(\"bald eagle\" \"sees\" \"bald eagle\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5 triple10) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle sees the bald eagle.",
+                "representation": "(\"bald eagle\" \"sees\" \"bald eagle\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-1239",
+    "split": "train",
+    "proof": "((triple2) -> rule1)",
+    "triples": {
+      "triple2": "Gary is rough."
+    },
+    "rules": {
+      "rule1": "If someone is rough then they are not big."
+    },
+    "theory": "Gary is rough. If someone is rough then they are not big.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is not big.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"big\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is not big.",
+                "representation": "(\"Gary\" \"is\" \"big\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is big.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Gary\" \"is\" \"big\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is not big.",
+                "representation": "(\"Gary\" \"is\" \"big\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-1817",
+    "split": "train",
+    "proof": "((triple1) -> rule1)",
+    "triples": {
+      "triple1": "Anne is white."
+    },
+    "rules": {
+      "rule1": "If something is white then it is round."
+    },
+    "theory": "Anne is white. If something is white then it is round.",
+    "questions": {
+      "Q3": {
+        "question": "Anne is round.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"round\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is round.",
+                "representation": "(\"Anne\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Anne is not round.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"round\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is round.",
+                "representation": "(\"Anne\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1633",
+    "split": "train",
+    "proof": "((triple1) -> rule1)",
+    "triples": {
+      "triple1": "The dog sees the squirrel."
+    },
+    "rules": {
+      "rule1": "If something sees the squirrel then it sees the dog."
+    },
+    "theory": "The dog sees the squirrel. If something sees the squirrel then it sees the dog.",
+    "questions": {
+      "Q3": {
+        "question": "The dog sees the dog.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"dog\" \"sees\" \"dog\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The dog sees the dog.",
+                "representation": "(\"dog\" \"sees\" \"dog\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The dog does not see the dog.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"dog\" \"sees\" \"dog\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The dog sees the dog.",
+                "representation": "(\"dog\" \"sees\" \"dog\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-707",
+    "split": "train",
+    "proof": "((triple5 triple4) -> rule1)",
+    "triples": {
+      "triple4": "Anne is nice.",
+      "triple5": "Anne is smart."
+    },
+    "rules": {
+      "rule1": "Smart, nice people are quiet."
+    },
+    "theory": "Anne is nice. Anne is smart. Smart, nice people are quiet.",
+    "questions": {
+      "Q3": {
+        "question": "Anne is quiet.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple5 triple4) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"quiet\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5 triple4) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is quiet.",
+                "representation": "(\"Anne\" \"is\" \"quiet\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Anne is not quiet.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple5 triple4) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"quiet\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5 triple4) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is quiet.",
+                "representation": "(\"Anne\" \"is\" \"quiet\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2726",
+    "split": "train",
+    "proof": "((triple3 triple1) -> rule1)",
+    "triples": {
+      "triple1": "Charlie is red.",
+      "triple3": "Charlie is young."
+    },
+    "rules": {
+      "rule1": "If someone is young and red then they are round."
+    },
+    "theory": "Charlie is red. Charlie is young. If someone is young and red then they are round.",
+    "questions": {
+      "Q3": {
+        "question": "Charlie is round.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple3 triple1) -> rule1))]",
+        "representation": "(\"Charlie\" \"is\" \"round\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3 triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is round.",
+                "representation": "(\"Charlie\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Charlie is not round.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3 triple1) -> rule1))]",
+        "representation": "(\"Charlie\" \"is\" \"round\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3 triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is round.",
+                "representation": "(\"Charlie\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-1370",
+    "split": "train",
+    "proof": "((triple1) -> rule3)",
+    "triples": {
+      "triple1": "Gary is young."
+    },
+    "rules": {
+      "rule3": "If something is young then it is nice."
+    },
+    "theory": "Gary is young. If something is young then it is nice.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule3))]",
+        "representation": "(\"Gary\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is nice.",
+                "representation": "(\"Gary\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is not nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule3))]",
+        "representation": "(\"Gary\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is nice.",
+                "representation": "(\"Gary\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-475",
+    "split": "train",
+    "proof": "((triple11) -> rule1)",
+    "triples": {
+      "triple11": "Fiona is cold."
+    },
+    "rules": {
+      "rule1": "If someone is cold then they are kind."
+    },
+    "theory": "Fiona is cold. If someone is cold then they are kind.",
+    "questions": {
+      "Q3": {
+        "question": "Fiona is kind.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple11) -> rule1))]",
+        "representation": "(\"Fiona\" \"is\" \"kind\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple11) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is kind.",
+                "representation": "(\"Fiona\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Fiona is not kind.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple11) -> rule1))]",
+        "representation": "(\"Fiona\" \"is\" \"kind\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple11) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is kind.",
+                "representation": "(\"Fiona\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-381",
+    "split": "train",
+    "proof": "((triple15 triple13) -> rule1)",
+    "triples": {
+      "triple13": "Harry is blue.",
+      "triple15": "Harry is round."
+    },
+    "rules": {
+      "rule1": "If something is round and blue then it is not green."
+    },
+    "theory": "Harry is blue. Harry is round. If something is round and blue then it is not green.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is not green.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple15 triple13) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"green\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple15 triple13) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is not green.",
+                "representation": "(\"Harry\" \"is\" \"green\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is green.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple15 triple13) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"green\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple15 triple13) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is not green.",
+                "representation": "(\"Harry\" \"is\" \"green\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-2400",
+    "split": "train",
+    "proof": "((triple2) -> rule2)",
+    "triples": {
+      "triple2": "The squirrel chases the rabbit."
+    },
+    "rules": {
+      "rule2": "If someone chases the rabbit then they are blue."
+    },
+    "theory": "The squirrel chases the rabbit. If someone chases the rabbit then they are blue.",
+    "questions": {
+      "Q3": {
+        "question": "The squirrel is blue.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"squirrel\" \"is\" \"blue\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The squirrel is blue.",
+                "representation": "(\"squirrel\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The squirrel is not blue.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"squirrel\" \"is\" \"blue\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The squirrel is blue.",
+                "representation": "(\"squirrel\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-543",
+    "split": "train",
+    "proof": "((triple5) -> rule2)",
+    "triples": {
+      "triple5": "Bob is round."
+    },
+    "rules": {
+      "rule2": "If someone is round then they are green."
+    },
+    "theory": "Bob is round. If someone is round then they are green.",
+    "questions": {
+      "Q3": {
+        "question": "Bob is green.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple5) -> rule2))]",
+        "representation": "(\"Bob\" \"is\" \"green\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Bob is green.",
+                "representation": "(\"Bob\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Bob is not green.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple5) -> rule2))]",
+        "representation": "(\"Bob\" \"is\" \"green\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Bob is green.",
+                "representation": "(\"Bob\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1553",
+    "split": "train",
+    "proof": "((triple6 triple8) -> rule2)",
+    "triples": {
+      "triple6": "The mouse is young.",
+      "triple8": "The mouse visits the squirrel."
+    },
+    "rules": {
+      "rule2": "If someone is young and they visit the squirrel then they need the mouse."
+    },
+    "theory": "The mouse is young. The mouse visits the squirrel. If someone is young and they visit the squirrel then they need the mouse.",
+    "questions": {
+      "Q3": {
+        "question": "The mouse needs the mouse.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple6 triple8) -> rule2))]",
+        "representation": "(\"mouse\" \"needs\" \"mouse\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6 triple8) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse needs the mouse.",
+                "representation": "(\"mouse\" \"needs\" \"mouse\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The mouse does not need the mouse.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple6 triple8) -> rule2))]",
+        "representation": "(\"mouse\" \"needs\" \"mouse\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6 triple8) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse needs the mouse.",
+                "representation": "(\"mouse\" \"needs\" \"mouse\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2850",
+    "split": "train",
+    "proof": "((triple16 triple15) -> rule3)",
+    "triples": {
+      "triple15": "Dave is not smart.",
+      "triple16": "Dave is young."
+    },
+    "rules": {
+      "rule3": "If someone is young and not smart then they are rough."
+    },
+    "theory": "Dave is not smart. Dave is young. If someone is young and not smart then they are rough.",
+    "questions": {
+      "Q3": {
+        "question": "Dave is rough.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple16 triple15) -> rule3))]",
+        "representation": "(\"Dave\" \"is\" \"rough\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple16 triple15) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is rough.",
+                "representation": "(\"Dave\" \"is\" \"rough\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Dave is not rough.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple16 triple15) -> rule3))]",
+        "representation": "(\"Dave\" \"is\" \"rough\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple16 triple15) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is rough.",
+                "representation": "(\"Dave\" \"is\" \"rough\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-1718",
+    "split": "train",
+    "proof": "((triple3 triple2) -> rule1)",
+    "triples": {
+      "triple2": "The bear likes the rabbit.",
+      "triple3": "The bear needs the rabbit."
+    },
+    "rules": {
+      "rule1": "If someone needs the rabbit and they like the rabbit then they are green."
+    },
+    "theory": "The bear likes the rabbit. The bear needs the rabbit. If someone needs the rabbit and they like the rabbit then they are green.",
+    "questions": {
+      "Q3": {
+        "question": "The bear is green.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple3 triple2) -> rule1))]",
+        "representation": "(\"bear\" \"is\" \"green\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3 triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bear is green.",
+                "representation": "(\"bear\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bear is not green.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3 triple2) -> rule1))]",
+        "representation": "(\"bear\" \"is\" \"green\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3 triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bear is green.",
+                "representation": "(\"bear\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-3235",
+    "split": "train",
+    "proof": "((triple8 triple6) -> rule1)",
+    "triples": {
+      "triple6": "Fiona is big.",
+      "triple8": "Fiona is smart."
+    },
+    "rules": {
+      "rule1": "If someone is smart and big then they are round."
+    },
+    "theory": "Fiona is big. Fiona is smart. If someone is smart and big then they are round.",
+    "questions": {
+      "Q3": {
+        "question": "Fiona is round.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple8 triple6) -> rule1))]",
+        "representation": "(\"Fiona\" \"is\" \"round\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8 triple6) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is round.",
+                "representation": "(\"Fiona\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Fiona is not round.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple8 triple6) -> rule1))]",
+        "representation": "(\"Fiona\" \"is\" \"round\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8 triple6) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is round.",
+                "representation": "(\"Fiona\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-1130",
+    "split": "train",
+    "proof": "((triple1) -> rule1)",
+    "triples": {
+      "triple1": "Anne is cold."
+    },
+    "rules": {
+      "rule1": "All cold people are not green."
+    },
+    "theory": "Anne is cold. All cold people are not green.",
+    "questions": {
+      "Q3": {
+        "question": "Anne is not green.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"green\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is not green.",
+                "representation": "(\"Anne\" \"is\" \"green\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Anne is green.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"green\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is not green.",
+                "representation": "(\"Anne\" \"is\" \"green\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2012",
+    "split": "train",
+    "proof": "((triple3) -> rule2)",
+    "triples": {
+      "triple3": "Fiona is nice."
+    },
+    "rules": {
+      "rule2": "If someone is nice then they are not rough."
+    },
+    "theory": "Fiona is nice. If someone is nice then they are not rough.",
+    "questions": {
+      "Q3": {
+        "question": "Fiona is not rough.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule2))]",
+        "representation": "(\"Fiona\" \"is\" \"rough\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is not rough.",
+                "representation": "(\"Fiona\" \"is\" \"rough\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Fiona is rough.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule2))]",
+        "representation": "(\"Fiona\" \"is\" \"rough\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is not rough.",
+                "representation": "(\"Fiona\" \"is\" \"rough\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2329",
+    "split": "train",
+    "proof": "((triple7) -> rule1)",
+    "triples": {
+      "triple7": "Harry is round."
+    },
+    "rules": {
+      "rule1": "If someone is round then they are nice."
+    },
+    "theory": "Harry is round. If someone is round then they are nice.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple7) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is nice.",
+                "representation": "(\"Harry\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple7) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is nice.",
+                "representation": "(\"Harry\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2494",
+    "split": "train",
+    "proof": "((triple8 triple9) -> rule1)",
+    "triples": {
+      "triple8": "Harry is cold.",
+      "triple9": "Harry is green."
+    },
+    "rules": {
+      "rule1": "All cold, green things are smart."
+    },
+    "theory": "Harry is cold. Harry is green. All cold, green things are smart.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is smart.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple8 triple9) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"smart\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8 triple9) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is smart.",
+                "representation": "(\"Harry\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not smart.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple8 triple9) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"smart\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple8 triple9) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is smart.",
+                "representation": "(\"Harry\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2730",
+    "split": "train",
+    "proof": "((triple4) -> rule2)",
+    "triples": {
+      "triple4": "Dave is young."
+    },
+    "rules": {
+      "rule2": "If someone is young then they are white."
+    },
+    "theory": "Dave is young. If someone is young then they are white.",
+    "questions": {
+      "Q3": {
+        "question": "Dave is white.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple4) -> rule2))]",
+        "representation": "(\"Dave\" \"is\" \"white\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is white.",
+                "representation": "(\"Dave\" \"is\" \"white\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Dave is not white.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple4) -> rule2))]",
+        "representation": "(\"Dave\" \"is\" \"white\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Dave is white.",
+                "representation": "(\"Dave\" \"is\" \"white\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-574",
+    "split": "train",
+    "proof": "((triple2) -> rule2)",
+    "triples": {
+      "triple2": "The rabbit is cold."
+    },
+    "rules": {
+      "rule2": "If something is cold then it is young."
+    },
+    "theory": "The rabbit is cold. If something is cold then it is young.",
+    "questions": {
+      "Q3": {
+        "question": "The rabbit is young.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"rabbit\" \"is\" \"young\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The rabbit is young.",
+                "representation": "(\"rabbit\" \"is\" \"young\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The rabbit is not young.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule2))]",
+        "representation": "(\"rabbit\" \"is\" \"young\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The rabbit is young.",
+                "representation": "(\"rabbit\" \"is\" \"young\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2714",
+    "split": "train",
+    "proof": "((triple10 triple9) -> rule3)",
+    "triples": {
+      "triple9": "Erin is cold.",
+      "triple10": "Erin is nice."
+    },
+    "rules": {
+      "rule3": "Nice, cold things are kind."
+    },
+    "theory": "Erin is cold. Erin is nice. Nice, cold things are kind.",
+    "questions": {
+      "Q3": {
+        "question": "Erin is kind.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple10 triple9) -> rule3))]",
+        "representation": "(\"Erin\" \"is\" \"kind\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple10 triple9) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is kind.",
+                "representation": "(\"Erin\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Erin is not kind.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple10 triple9) -> rule3))]",
+        "representation": "(\"Erin\" \"is\" \"kind\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple10 triple9) -> (rule3 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is kind.",
+                "representation": "(\"Erin\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-781",
+    "split": "train",
+    "proof": "((triple2) -> rule5)",
+    "triples": {
+      "triple2": "Fiona is red."
+    },
+    "rules": {
+      "rule5": "Red people are nice."
+    },
+    "theory": "Fiona is red. Red people are nice.",
+    "questions": {
+      "Q3": {
+        "question": "Fiona is nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule5))]",
+        "representation": "(\"Fiona\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is nice.",
+                "representation": "(\"Fiona\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Fiona is not nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule5))]",
+        "representation": "(\"Fiona\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is nice.",
+                "representation": "(\"Fiona\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-1441",
+    "split": "train",
+    "proof": "((triple3) -> rule1)",
+    "triples": {
+      "triple3": "The dog is blue."
+    },
+    "rules": {
+      "rule1": "All blue things are not green."
+    },
+    "theory": "The dog is blue. All blue things are not green.",
+    "questions": {
+      "Q3": {
+        "question": "The dog is not green.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"dog\" \"is\" \"green\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The dog is not green.",
+                "representation": "(\"dog\" \"is\" \"green\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The dog is green.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"dog\" \"is\" \"green\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The dog is not green.",
+                "representation": "(\"dog\" \"is\" \"green\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2440",
+    "split": "train",
+    "proof": "((triple14) -> rule2)",
+    "triples": {
+      "triple14": "Fiona is smart."
+    },
+    "rules": {
+      "rule2": "Smart things are not kind."
+    },
+    "theory": "Fiona is smart. Smart things are not kind.",
+    "questions": {
+      "Q3": {
+        "question": "Fiona is not kind.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple14) -> rule2))]",
+        "representation": "(\"Fiona\" \"is\" \"kind\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple14) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is not kind.",
+                "representation": "(\"Fiona\" \"is\" \"kind\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Fiona is kind.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple14) -> rule2))]",
+        "representation": "(\"Fiona\" \"is\" \"kind\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple14) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Fiona is not kind.",
+                "representation": "(\"Fiona\" \"is\" \"kind\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-1238",
+    "split": "train",
+    "proof": "((triple5 triple3) -> rule1)",
+    "triples": {
+      "triple3": "The bald eagle needs the lion.",
+      "triple5": "The lion eats the bald eagle."
+    },
+    "rules": {
+      "rule1": "If something eats the bald eagle and the bald eagle needs the lion then it visits the lion."
+    },
+    "theory": "The bald eagle needs the lion. The lion eats the bald eagle. If something eats the bald eagle and the bald eagle needs the lion then it visits the lion.",
+    "questions": {
+      "Q3": {
+        "question": "The lion visits the lion.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple5 triple3) -> rule1))]",
+        "representation": "(\"lion\" \"visits\" \"lion\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5 triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The lion visits the lion.",
+                "representation": "(\"lion\" \"visits\" \"lion\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The lion does not visit the lion.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple5 triple3) -> rule1))]",
+        "representation": "(\"lion\" \"visits\" \"lion\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5 triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The lion visits the lion.",
+                "representation": "(\"lion\" \"visits\" \"lion\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-873",
+    "split": "train",
+    "proof": "((triple4) -> rule1)",
+    "triples": {
+      "triple4": "Harry is green."
+    },
+    "rules": {
+      "rule1": "If something is green then it is furry."
+    },
+    "theory": "Harry is green. If something is green then it is furry.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is furry.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple4) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"furry\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is furry.",
+                "representation": "(\"Harry\" \"is\" \"furry\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not furry.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple4) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"furry\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is furry.",
+                "representation": "(\"Harry\" \"is\" \"furry\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1126",
+    "split": "train",
+    "proof": "((triple1) -> rule2)",
+    "triples": {
+      "triple1": "The bald eagle is round."
+    },
+    "rules": {
+      "rule2": "If someone is round then they are young."
+    },
+    "theory": "The bald eagle is round. If someone is round then they are young.",
+    "questions": {
+      "Q3": {
+        "question": "The bald eagle is young.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule2))]",
+        "representation": "(\"bald eagle\" \"is\" \"young\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle is young.",
+                "representation": "(\"bald eagle\" \"is\" \"young\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bald eagle is not young.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule2))]",
+        "representation": "(\"bald eagle\" \"is\" \"young\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle is young.",
+                "representation": "(\"bald eagle\" \"is\" \"young\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2558",
+    "split": "train",
+    "proof": "((triple4) -> rule4)",
+    "triples": {
+      "triple4": "Gary is cold."
+    },
+    "rules": {
+      "rule4": "All cold things are not nice."
+    },
+    "theory": "Gary is cold. All cold things are not nice.",
+    "questions": {
+      "Q3": {
+        "question": "Gary is not nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple4) -> rule4))]",
+        "representation": "(\"Gary\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule4 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is not nice.",
+                "representation": "(\"Gary\" \"is\" \"nice\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Gary is nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple4) -> rule4))]",
+        "representation": "(\"Gary\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule4 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Gary is not nice.",
+                "representation": "(\"Gary\" \"is\" \"nice\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2855",
+    "split": "train",
+    "proof": "((triple2) -> rule1)",
+    "triples": {
+      "triple2": "Charlie is kind."
+    },
+    "rules": {
+      "rule1": "Kind people are quiet."
+    },
+    "theory": "Charlie is kind. Kind people are quiet.",
+    "questions": {
+      "Q3": {
+        "question": "Charlie is quiet.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Charlie\" \"is\" \"quiet\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is quiet.",
+                "representation": "(\"Charlie\" \"is\" \"quiet\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Charlie is not quiet.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Charlie\" \"is\" \"quiet\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is quiet.",
+                "representation": "(\"Charlie\" \"is\" \"quiet\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2103",
+    "split": "train",
+    "proof": "((triple1) -> rule1)",
+    "triples": {
+      "triple1": "Anne is young."
+    },
+    "rules": {
+      "rule1": "Young things are quiet."
+    },
+    "theory": "Anne is young. Young things are quiet.",
+    "questions": {
+      "Q3": {
+        "question": "Anne is quiet.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"quiet\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is quiet.",
+                "representation": "(\"Anne\" \"is\" \"quiet\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Anne is not quiet.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"quiet\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is quiet.",
+                "representation": "(\"Anne\" \"is\" \"quiet\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-2309",
+    "split": "train",
+    "proof": "((triple4) -> rule2)",
+    "triples": {
+      "triple4": "The cow is rough."
+    },
+    "rules": {
+      "rule2": "If something is rough then it sees the cow."
+    },
+    "theory": "The cow is rough. If something is rough then it sees the cow.",
+    "questions": {
+      "Q3": {
+        "question": "The cow sees the cow.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple4) -> rule2))]",
+        "representation": "(\"cow\" \"sees\" \"cow\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cow sees the cow.",
+                "representation": "(\"cow\" \"sees\" \"cow\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The cow does not see the cow.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple4) -> rule2))]",
+        "representation": "(\"cow\" \"sees\" \"cow\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cow sees the cow.",
+                "representation": "(\"cow\" \"sees\" \"cow\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-925",
+    "split": "train",
+    "proof": "((triple3) -> rule2)",
+    "triples": {
+      "triple3": "The bald eagle is green."
+    },
+    "rules": {
+      "rule2": "If something is green then it chases the bald eagle."
+    },
+    "theory": "The bald eagle is green. If something is green then it chases the bald eagle.",
+    "questions": {
+      "Q3": {
+        "question": "The bald eagle chases the bald eagle.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule2))]",
+        "representation": "(\"bald eagle\" \"chases\" \"bald eagle\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle chases the bald eagle.",
+                "representation": "(\"bald eagle\" \"chases\" \"bald eagle\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bald eagle does not chase the bald eagle.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule2))]",
+        "representation": "(\"bald eagle\" \"chases\" \"bald eagle\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle chases the bald eagle.",
+                "representation": "(\"bald eagle\" \"chases\" \"bald eagle\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-523",
+    "split": "train",
+    "proof": "((triple1) -> rule1)",
+    "triples": {
+      "triple1": "Harry is round."
+    },
+    "rules": {
+      "rule1": "All round things are nice."
+    },
+    "theory": "Harry is round. All round things are nice.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is nice.",
+                "representation": "(\"Harry\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is nice.",
+                "representation": "(\"Harry\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-938",
+    "split": "train",
+    "proof": "((triple1) -> rule6)",
+    "triples": {
+      "triple1": "The mouse is big."
+    },
+    "rules": {
+      "rule6": "If something is big then it is round."
+    },
+    "theory": "The mouse is big. If something is big then it is round.",
+    "questions": {
+      "Q3": {
+        "question": "The mouse is round.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule6))]",
+        "representation": "(\"mouse\" \"is\" \"round\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse is round.",
+                "representation": "(\"mouse\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The mouse is not round.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule6))]",
+        "representation": "(\"mouse\" \"is\" \"round\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse is round.",
+                "representation": "(\"mouse\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-757",
+    "split": "train",
+    "proof": "((triple2) -> rule6)",
+    "triples": {
+      "triple2": "The lion is cold."
+    },
+    "rules": {
+      "rule6": "If someone is cold then they chase the dog."
+    },
+    "theory": "The lion is cold. If someone is cold then they chase the dog.",
+    "questions": {
+      "Q3": {
+        "question": "The lion chases the dog.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule6))]",
+        "representation": "(\"lion\" \"chases\" \"dog\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The lion chases the dog.",
+                "representation": "(\"lion\" \"chases\" \"dog\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The lion does not chase the dog.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule6))]",
+        "representation": "(\"lion\" \"chases\" \"dog\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule6 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The lion chases the dog.",
+                "representation": "(\"lion\" \"chases\" \"dog\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2488",
+    "split": "train",
+    "proof": "((triple3) -> rule1)",
+    "triples": {
+      "triple3": "Anne is smart."
+    },
+    "rules": {
+      "rule1": "Smart people are round."
+    },
+    "theory": "Anne is smart. Smart people are round.",
+    "questions": {
+      "Q3": {
+        "question": "Anne is round.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"round\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is round.",
+                "representation": "(\"Anne\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Anne is not round.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Anne\" \"is\" \"round\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is round.",
+                "representation": "(\"Anne\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-2550",
+    "split": "train",
+    "proof": "((triple9) -> rule1)",
+    "triples": {
+      "triple9": "The bear is nice."
+    },
+    "rules": {
+      "rule1": "If something is nice then it visits the bear."
+    },
+    "theory": "The bear is nice. If something is nice then it visits the bear.",
+    "questions": {
+      "Q3": {
+        "question": "The bear visits the bear.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple9) -> rule1))]",
+        "representation": "(\"bear\" \"visits\" \"bear\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bear visits the bear.",
+                "representation": "(\"bear\" \"visits\" \"bear\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bear does not visit the bear.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple9) -> rule1))]",
+        "representation": "(\"bear\" \"visits\" \"bear\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bear visits the bear.",
+                "representation": "(\"bear\" \"visits\" \"bear\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-112",
+    "split": "train",
+    "proof": "((triple1) -> rule5)",
+    "triples": {
+      "triple1": "Charlie is furry."
+    },
+    "rules": {
+      "rule5": "If something is furry then it is rough."
+    },
+    "theory": "Charlie is furry. If something is furry then it is rough.",
+    "questions": {
+      "Q3": {
+        "question": "Charlie is rough.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule5))]",
+        "representation": "(\"Charlie\" \"is\" \"rough\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is rough.",
+                "representation": "(\"Charlie\" \"is\" \"rough\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Charlie is not rough.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule5))]",
+        "representation": "(\"Charlie\" \"is\" \"rough\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is rough.",
+                "representation": "(\"Charlie\" \"is\" \"rough\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-1775",
+    "split": "train",
+    "proof": "((triple1) -> rule1)",
+    "triples": {
+      "triple1": "The cat is blue."
+    },
+    "rules": {
+      "rule1": "All blue people are green."
+    },
+    "theory": "The cat is blue. All blue people are green.",
+    "questions": {
+      "Q3": {
+        "question": "The cat is green.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"cat\" \"is\" \"green\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat is green.",
+                "representation": "(\"cat\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The cat is not green.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"cat\" \"is\" \"green\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat is green.",
+                "representation": "(\"cat\" \"is\" \"green\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-1926",
+    "split": "train",
+    "proof": "((triple1) -> rule1)",
+    "triples": {
+      "triple1": "The bear is round."
+    },
+    "rules": {
+      "rule1": "All round things are blue."
+    },
+    "theory": "The bear is round. All round things are blue.",
+    "questions": {
+      "Q3": {
+        "question": "The bear is blue.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"bear\" \"is\" \"blue\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bear is blue.",
+                "representation": "(\"bear\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bear is not blue.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule1))]",
+        "representation": "(\"bear\" \"is\" \"blue\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bear is blue.",
+                "representation": "(\"bear\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2865",
+    "split": "train",
+    "proof": "((triple4) -> rule2)",
+    "triples": {
+      "triple4": "Harry is green."
+    },
+    "rules": {
+      "rule2": "All green things are nice."
+    },
+    "theory": "Harry is green. All green things are nice.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple4) -> rule2))]",
+        "representation": "(\"Harry\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is nice.",
+                "representation": "(\"Harry\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple4) -> rule2))]",
+        "representation": "(\"Harry\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple4) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is nice.",
+                "representation": "(\"Harry\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-2622",
+    "split": "train",
+    "proof": "((triple2) -> rule1)",
+    "triples": {
+      "triple2": "Erin is white."
+    },
+    "rules": {
+      "rule1": "White things are young."
+    },
+    "theory": "Erin is white. White things are young.",
+    "questions": {
+      "Q3": {
+        "question": "Erin is young.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Erin\" \"is\" \"young\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is young.",
+                "representation": "(\"Erin\" \"is\" \"young\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Erin is not young.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Erin\" \"is\" \"young\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is young.",
+                "representation": "(\"Erin\" \"is\" \"young\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-421",
+    "split": "train",
+    "proof": "((triple2) -> rule1)",
+    "triples": {
+      "triple2": "Bob is cold."
+    },
+    "rules": {
+      "rule1": "If something is cold then it is furry."
+    },
+    "theory": "Bob is cold. If something is cold then it is furry.",
+    "questions": {
+      "Q3": {
+        "question": "Bob is furry.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Bob\" \"is\" \"furry\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Bob is furry.",
+                "representation": "(\"Bob\" \"is\" \"furry\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Bob is not furry.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple2) -> rule1))]",
+        "representation": "(\"Bob\" \"is\" \"furry\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple2) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Bob is furry.",
+                "representation": "(\"Bob\" \"is\" \"furry\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-2117",
+    "split": "train",
+    "proof": "((triple12 triple14) -> rule1)",
+    "triples": {
+      "triple12": "The cat is red.",
+      "triple14": "The cat is young."
+    },
+    "rules": {
+      "rule1": "If something is red and young then it likes the cat."
+    },
+    "theory": "The cat is red. The cat is young. If something is red and young then it likes the cat.",
+    "questions": {
+      "Q3": {
+        "question": "The cat likes the cat.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple12 triple14) -> rule1))]",
+        "representation": "(\"cat\" \"likes\" \"cat\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12 triple14) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat likes the cat.",
+                "representation": "(\"cat\" \"likes\" \"cat\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The cat does not like the cat.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple12 triple14) -> rule1))]",
+        "representation": "(\"cat\" \"likes\" \"cat\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple12 triple14) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat likes the cat.",
+                "representation": "(\"cat\" \"likes\" \"cat\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNeg-OWA-D1-789",
+    "split": "train",
+    "proof": "((triple7) -> rule2)",
+    "triples": {
+      "triple7": "Harry is big."
+    },
+    "rules": {
+      "rule2": "If someone is big then they are kind."
+    },
+    "theory": "Harry is big. If someone is big then they are kind.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is kind.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple7) -> rule2) OR ((triple7 triple9) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"kind\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is kind.",
+                "representation": "(\"Harry\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          },
+          {
+            "representation": "((triple7 triple9) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is kind.",
+                "representation": "(\"Harry\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not kind.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple7) -> rule2) OR ((triple7 triple9) -> rule1))]",
+        "representation": "(\"Harry\" \"is\" \"kind\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple7) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is kind.",
+                "representation": "(\"Harry\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          },
+          {
+            "representation": "((triple7 triple9) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is kind.",
+                "representation": "(\"Harry\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-3138",
+    "split": "train",
+    "proof": "((triple1) -> rule2)",
+    "triples": {
+      "triple1": "Anne is green."
+    },
+    "rules": {
+      "rule2": "If something is green then it is round."
+    },
+    "theory": "Anne is green. If something is green then it is round.",
+    "questions": {
+      "Q3": {
+        "question": "Anne is round.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule2))]",
+        "representation": "(\"Anne\" \"is\" \"round\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is round.",
+                "representation": "(\"Anne\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Anne is not round.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule2))]",
+        "representation": "(\"Anne\" \"is\" \"round\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is round.",
+                "representation": "(\"Anne\" \"is\" \"round\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-1127",
+    "split": "train",
+    "proof": "((triple5) -> rule2)",
+    "triples": {
+      "triple5": "Charlie is kind."
+    },
+    "rules": {
+      "rule2": "Kind things are red."
+    },
+    "theory": "Charlie is kind. Kind things are red.",
+    "questions": {
+      "Q3": {
+        "question": "Charlie is red.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple5) -> rule1) OR ((triple5) -> rule2))]",
+        "representation": "(\"Charlie\" \"is\" \"red\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is red.",
+                "representation": "(\"Charlie\" \"is\" \"red\" \"+\")"
+              }
+            }
+          },
+          {
+            "representation": "((triple5) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is red.",
+                "representation": "(\"Charlie\" \"is\" \"red\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Charlie is not red.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple5) -> rule1) OR ((triple5) -> rule2))]",
+        "representation": "(\"Charlie\" \"is\" \"red\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple5) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is red.",
+                "representation": "(\"Charlie\" \"is\" \"red\" \"+\")"
+              }
+            }
+          },
+          {
+            "representation": "((triple5) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Charlie is red.",
+                "representation": "(\"Charlie\" \"is\" \"red\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1895",
+    "split": "train",
+    "proof": "((triple3) -> rule1)",
+    "triples": {
+      "triple3": "The cat chases the bear."
+    },
+    "rules": {
+      "rule1": "If something chases the bear then it likes the bear."
+    },
+    "theory": "The cat chases the bear. If something chases the bear then it likes the bear.",
+    "questions": {
+      "Q3": {
+        "question": "The cat likes the bear.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"cat\" \"likes\" \"bear\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat likes the bear.",
+                "representation": "(\"cat\" \"likes\" \"bear\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The cat does not like the bear.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"cat\" \"likes\" \"bear\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The cat likes the bear.",
+                "representation": "(\"cat\" \"likes\" \"bear\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2593",
+    "split": "train",
+    "proof": "((triple9) -> rule7)",
+    "triples": {
+      "triple9": "Harry is smart."
+    },
+    "rules": {
+      "rule7": "If something is smart then it is furry."
+    },
+    "theory": "Harry is smart. If something is smart then it is furry.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is furry.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple9) -> rule7))]",
+        "representation": "(\"Harry\" \"is\" \"furry\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9) -> (rule7 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is furry.",
+                "representation": "(\"Harry\" \"is\" \"furry\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not furry.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple9) -> rule7))]",
+        "representation": "(\"Harry\" \"is\" \"furry\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9) -> (rule7 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is furry.",
+                "representation": "(\"Harry\" \"is\" \"furry\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-3254",
+    "split": "train",
+    "proof": "((triple1) -> rule5)",
+    "triples": {
+      "triple1": "Harry is white."
+    },
+    "rules": {
+      "rule5": "White people are smart."
+    },
+    "theory": "Harry is white. White people are smart.",
+    "questions": {
+      "Q3": {
+        "question": "Harry is smart.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule5))]",
+        "representation": "(\"Harry\" \"is\" \"smart\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is smart.",
+                "representation": "(\"Harry\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Harry is not smart.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule5))]",
+        "representation": "(\"Harry\" \"is\" \"smart\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule5 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Harry is smart.",
+                "representation": "(\"Harry\" \"is\" \"smart\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-1405",
+    "split": "train",
+    "proof": "((triple1) -> rule2)",
+    "triples": {
+      "triple1": "Erin is red."
+    },
+    "rules": {
+      "rule2": "If something is red then it is white."
+    },
+    "theory": "Erin is red. If something is red then it is white.",
+    "questions": {
+      "Q3": {
+        "question": "Erin is white.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple1) -> rule2))]",
+        "representation": "(\"Erin\" \"is\" \"white\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is white.",
+                "representation": "(\"Erin\" \"is\" \"white\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Erin is not white.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1) -> rule2))]",
+        "representation": "(\"Erin\" \"is\" \"white\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is white.",
+                "representation": "(\"Erin\" \"is\" \"white\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-71",
+    "split": "train",
+    "proof": "((triple9 triple8) -> rule1)",
+    "triples": {
+      "triple8": "Erin is nice.",
+      "triple9": "Erin is white."
+    },
+    "rules": {
+      "rule1": "If someone is white and nice then they are kind."
+    },
+    "theory": "Erin is nice. Erin is white. If someone is white and nice then they are kind.",
+    "questions": {
+      "Q3": {
+        "question": "Erin is kind.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple9 triple8) -> rule1))]",
+        "representation": "(\"Erin\" \"is\" \"kind\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9 triple8) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is kind.",
+                "representation": "(\"Erin\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Erin is not kind.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple9 triple8) -> rule1))]",
+        "representation": "(\"Erin\" \"is\" \"kind\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple9 triple8) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is kind.",
+                "representation": "(\"Erin\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-1983",
+    "split": "train",
+    "proof": "((triple3) -> rule1)",
+    "triples": {
+      "triple3": "Erin is cold."
+    },
+    "rules": {
+      "rule1": "All cold people are red."
+    },
+    "theory": "Erin is cold. All cold people are red.",
+    "questions": {
+      "Q3": {
+        "question": "Erin is red.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Erin\" \"is\" \"red\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is red.",
+                "representation": "(\"Erin\" \"is\" \"red\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Erin is not red.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3) -> rule1))]",
+        "representation": "(\"Erin\" \"is\" \"red\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Erin is red.",
+                "representation": "(\"Erin\" \"is\" \"red\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-329",
+    "split": "train",
+    "proof": "((triple6) -> rule1)",
+    "triples": {
+      "triple6": "The squirrel needs the rabbit."
+    },
+    "rules": {
+      "rule1": "If someone needs the rabbit then they are nice."
+    },
+    "theory": "The squirrel needs the rabbit. If someone needs the rabbit then they are nice.",
+    "questions": {
+      "Q3": {
+        "question": "The squirrel is nice.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple6) -> rule1))]",
+        "representation": "(\"squirrel\" \"is\" \"nice\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The squirrel is nice.",
+                "representation": "(\"squirrel\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The squirrel is not nice.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple6) -> rule1))]",
+        "representation": "(\"squirrel\" \"is\" \"nice\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple6) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The squirrel is nice.",
+                "representation": "(\"squirrel\" \"is\" \"nice\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "AttNoneg-OWA-D1-2546",
+    "split": "train",
+    "proof": "((triple3 triple1) -> rule2)",
+    "triples": {
+      "triple1": "Anne is green.",
+      "triple3": "Anne is smart."
+    },
+    "rules": {
+      "rule2": "All smart, green people are kind."
+    },
+    "theory": "Anne is green. Anne is smart. All smart, green people are kind.",
+    "questions": {
+      "Q3": {
+        "question": "Anne is kind.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple3 triple1) -> rule2))]",
+        "representation": "(\"Anne\" \"is\" \"kind\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3 triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is kind.",
+                "representation": "(\"Anne\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "Anne is not kind.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple3 triple1) -> rule2))]",
+        "representation": "(\"Anne\" \"is\" \"kind\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple3 triple1) -> (rule2 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "Anne is kind.",
+                "representation": "(\"Anne\" \"is\" \"kind\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNoneg-OWA-D1-1420",
+    "split": "train",
+    "proof": "((triple10) -> rule1)",
+    "triples": {
+      "triple10": "The mouse visits the dog."
+    },
+    "rules": {
+      "rule1": "If something visits the dog then it is blue."
+    },
+    "theory": "The mouse visits the dog. If something visits the dog then it is blue.",
+    "questions": {
+      "Q3": {
+        "question": "The mouse is blue.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "proof",
+        "proofs": "[(((triple10) -> rule1))]",
+        "representation": "(\"mouse\" \"is\" \"blue\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple10) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse is blue.",
+                "representation": "(\"mouse\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The mouse is not blue.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 2,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple10) -> rule1))]",
+        "representation": "(\"mouse\" \"is\" \"blue\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple10) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The mouse is blue.",
+                "representation": "(\"mouse\" \"is\" \"blue\" \"+\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RelNeg-OWA-D1-534",
+    "split": "train",
+    "proof": "((triple1 triple7) -> rule1)",
+    "triples": {
+      "triple1": "The bald eagle chases the dog.",
+      "triple7": "The bald eagle is not young."
+    },
+    "rules": {
+      "rule1": "If something chases the dog and it is not young then it does not eat the bald eagle."
+    },
+    "theory": "The bald eagle chases the dog. The bald eagle is not young. If something chases the dog and it is not young then it does not eat the bald eagle.",
+    "questions": {
+      "Q3": {
+        "question": "The bald eagle does not eat the bald eagle.",
+        "answer": true,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "proof",
+        "proofs": "[(((triple1 triple7) -> rule1))]",
+        "representation": "(\"bald eagle\" \"eats\" \"bald eagle\" \"-\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1 triple7) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle does not eat the bald eagle.",
+                "representation": "(\"bald eagle\" \"eats\" \"bald eagle\" \"-\")"
+              }
+            }
+          }
+        ]
+      },
+      "Q4": {
+        "question": "The bald eagle eats the bald eagle.",
+        "answer": false,
+        "QDep": 1,
+        "QLen": 3,
+        "strategy": "inv-proof",
+        "proofs": "[(((triple1 triple7) -> rule1))]",
+        "representation": "(\"bald eagle\" \"eats\" \"bald eagle\" \"+\")",
+        "proofsWithIntermediates": [
+          {
+            "representation": "((triple1 triple7) -> (rule1 % int1))",
+            "intermediates": {
+              "int1": {
+                "text": "The bald eagle does not eat the bald eagle.",
+                "representation": "(\"bald eagle\" \"eats\" \"bald eagle\" \"-\")"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+]

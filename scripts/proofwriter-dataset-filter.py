@@ -1,8 +1,9 @@
 # Filters the OWA depth-1 ProofWriter files for the binding experiment.
 #
 # For each theory:
-#   - The allProofs and proofDetails fields are removed.
+#   - The allProofs, proofDetails and maxD fields are removed.
 #   - Rules without "someone"/"something" (named-entity rules) are removed.
+#     NRule and theory are updated to match the remaining rules.
 #   - Only questions with QDep = 1 and answer True or False are kept.
 #   - Inside each kept question, only proofs that
 #       1. take exactly one step, and
@@ -66,12 +67,25 @@ def filter_theory(theory):
     del theory["allProofs"]
     del theory["proofDetails"]
 
+    # Remove maxD: it is the depth of the deepest statement the original
+    # theory can prove, and it may be wrong once rules are removed.
+    del theory["maxD"]
+
     # Keep only rules that contain "someone" or "something".
     theory["rules"] = {
         name: rule
         for name, rule in theory["rules"].items()
         if has_variable(rule["representation"])
     }
+
+    # Update the rule count to the remaining rules.
+    theory["NRule"] = len(theory["rules"])
+
+    # Rebuild the theory text: facts first, then the remaining rules,
+    # joined with spaces, the same way the original dataset builds it.
+    fact_texts = [fact["text"] for fact in theory["triples"].values()]
+    rule_texts = [rule["text"] for rule in theory["rules"].values()]
+    theory["theory"] = " ".join(fact_texts + rule_texts)
 
     kept_questions = {}
 

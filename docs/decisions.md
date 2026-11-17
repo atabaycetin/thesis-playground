@@ -16,9 +16,11 @@
 
 * If a question is left with no proof after these filters, it gets removed.
 
-* If a question has true and false questions (conclusion) that are not negated versions of each other (different conclusions but one is affirmative and one is negated), that data point is dropped.
+* If a question has true and false questions (conclusion) that are not negated versions of each other (if they are not different conclusions with only difference one is affirmative and one is negated), that data point is dropped. We must have the same question, just one is negated version of the other. Otherwise we cannot compare them.
 
 * Basically anything that doesn't relate to binding have been filtered out. The goal is to make our jobs easier, while making sure everything stays valid. I think this is the best approach without creating a dataset tailored for this job so that we can analyze real cases, real-life correlated logical problems.
+
+* I consider every data point (every fact,rule,conclusion triple) one document for bag of words.
 
 - In the end:
 train: 5532 theories kept
