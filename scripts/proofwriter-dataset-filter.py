@@ -11,6 +11,10 @@
 #     are kept, in both proofs and proofsWithIntermediates.
 #     QLen is recomputed from the shortest remaining proof.
 #     A question with no proof left is removed.
+#   - Facts and rules used by a removed proof are removed, unless a kept
+#     proof uses them, so the removed proofs are no longer possible.
+#     Proofs through a removed named-entity rule are ignored here.
+#     NFact, NRule and theory are updated to match.
 #   - A theory is kept only if both of its depth-1 questions are left,
 #     and the False question is the negation of the True one.
 # Everything else is copied as it is.
@@ -51,6 +55,10 @@ def keep_proof(proof, rules):
     if proof.count("->") != 1:
         return False
 
+    # Keep only single-fact proofs.
+    if len(re.findall(r"triple\d+", proof)) > 1:
+        return False
+
     rule_name = proof.split("->")[1].strip(" )")
 
     # The rule was removed because it names an entity.
@@ -78,16 +86,11 @@ def filter_theory(theory):
         if has_variable(rule["representation"])
     }
 
-    # Update the rule count to the remaining rules.
-    theory["NRule"] = len(theory["rules"])
-
-    # Rebuild the theory text: facts first, then the remaining rules,
-    # joined with spaces, the same way the original dataset builds it.
-    fact_texts = [fact["text"] for fact in theory["triples"].values()]
-    rule_texts = [rule["text"] for rule in theory["rules"].values()]
-    theory["theory"] = " ".join(fact_texts + rule_texts)
-
     kept_questions = {}
+
+    # Proofs removed from any kept question, collected for the step below
+    # that removes the facts and rules they depend on.
+    dropped_proofs = []
 
     for name, question in theory["questions"].items():
         # Drop depth-0 questions and "Unknown" answers.
@@ -108,6 +111,8 @@ def filter_theory(theory):
             if keep_proof(proof, theory["rules"]):
                 kept_proofs.append(proof)
                 kept_details.append(detail)
+            else:
+                dropped_proofs.append(proof)
 
         # No proof left: drop the question.
         if not kept_proofs:
@@ -138,6 +143,48 @@ def filter_theory(theory):
         return None
 
     theory["questions"] = kept_questions
+
+    # Facts and rules used by a kept proof. These are never removed.
+    needed = set()
+    for question in kept_questions.values():
+        for proof in question["proofs"][2:-2].split(" OR "):
+            needed.update(re.findall(r"triple\d+|rule\d+", proof))
+
+    # Facts and rules used by a dropped proof that is still possible in the
+    # theory text, i.e. all of its rules are still in theory["rules"].
+    # A dropped proof that uses a removed (named-entity) rule is already
+    # impossible, so its facts are not removed.
+    to_remove = set()
+    for proof in dropped_proofs:
+        rule_names = re.findall(r"rule\d+", proof)
+        if all(name in theory["rules"] for name in rule_names):
+            to_remove.update(re.findall(r"triple\d+|rule\d+", proof))
+
+    # Keep whatever a kept proof needs. Removing at least one piece
+    # of a dropped proof is enough to make that proof impossible.
+    to_remove = to_remove - needed
+
+    theory["triples"] = {
+        name: fact
+        for name, fact in theory["triples"].items()
+        if name not in to_remove
+    }
+    theory["rules"] = {
+        name: rule
+        for name, rule in theory["rules"].items()
+        if name not in to_remove
+    }
+
+    # Update the fact and rule counts to the remaining facts and rules.
+    theory["NFact"] = len(theory["triples"])
+    theory["NRule"] = len(theory["rules"])
+
+    # Rebuild the theory text: facts first, then the remaining rules,
+    # joined with spaces, the same way the original dataset builds it.
+    fact_texts = [fact["text"] for fact in theory["triples"].values()]
+    rule_texts = [rule["text"] for rule in theory["rules"].values()]
+    theory["theory"] = " ".join(fact_texts + rule_texts)
+
     return theory
 
 
